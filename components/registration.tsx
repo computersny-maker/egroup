@@ -88,21 +88,27 @@ export function Registration() {
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-5"
+                noValidate
+                data-lpignore="true"
+                data-form-type="other"
+              >
                 <div className="grid gap-5 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="nombre">Nombre completo</Label>
-                    <Input id="nombre" name="nombre" required autoComplete="name" placeholder="Tu nombre" />
+                    <Input id="nombre" name="nombre" required autoComplete="name" placeholder="Tu nombre" data-lpignore="true" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="telefono">Teléfono</Label>
-                    <Input id="telefono" name="telefono" type="tel" required autoComplete="tel" placeholder="(000) 000-0000" />
+                    <Input id="telefono" name="telefono" type="tel" required autoComplete="tel" placeholder="(000) 000-0000" data-lpignore="true" />
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Correo electrónico</Label>
-                  <Input id="email" name="email" type="email" autoComplete="email" placeholder="tucorreo@ejemplo.com" />
+                  <Input id="email" name="email" type="email" autoComplete="email" placeholder="tucorreo@ejemplo.com" data-lpignore="true" />
                 </div>
 
                 <div className="space-y-2">
